@@ -1,17 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import TextArea from './TextArea';
+import AddItem from './components/AddItem';
+import DisplayItems from './components/DisplayItems';
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  const addItem = (text, date) => {
+    const newItem = { text, date };
+    setItems([...items, newItem]);
+  };
+
   return (
-    <>
-      <h1>To-Do-List</h1>
-      <TextArea></TextArea>
-    </>
-  )
+    <div>
+      <center>
+        <h1>To-Do List</h1>
+        <AddItem onAddItem={addItem} />
+        <DisplayItems items={items} />
+      </center>
+    </div>
+  );
 }
 
-export default App
+export default App;

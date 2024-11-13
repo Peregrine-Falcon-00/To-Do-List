@@ -1,0 +1,30 @@
+.container {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+}
+
+.list {
+      list-style-type: none;
+      padding: 0;
+}
+
+.listItem {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+}
+
+.listItem:last-child {
+      border-bottom: none;
+}
+
+.text {
+      font-weight: bold;
+}
+
+.date {
+      color: #888;
+      font-style: italic;
+}
